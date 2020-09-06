@@ -114,16 +114,21 @@
     document.getElementById("LentSidenav").style.maxHeight = "0vh";
     document.getElementById("Large").style.height = "96vh";
     document.getElementById("lentClose").childNodes[1].src = "./img/uparrow2_89326.png";
+    document.getElementById("lentClosetwo").childNodes[1].src = "./img/uparrow2_89326.png";
+
     /*document.getElementById("lentClose").setAttribute("onclick", "openLentNav");*/
     document.getElementById("lentClose").setAttribute("onclick", "closeLentNav(2)");
+    document.getElementById("lentClosetwo").setAttribute("onclick", "closeLentNav(2)");
     }
     else if (n==2){
       /*document.getElementById("LentSidenav").style.height = "unset";*/
       document.getElementById("LentSidenav").style.maxHeight = "15vh";
       document.getElementById("Large").style.height = "81vh";
       document.getElementById("lentClose").childNodes[1].src = "./img/downarrow2_89392.png";
+      document.getElementById("lentClosetwo").childNodes[1].src = "./img/downarrow2_89392.png";
       /*document.getElementById("lentClose").setAttribute("onclick", "closeLentNav");*/
       document.getElementById("lentClose").setAttribute("onclick", "closeLentNav(1)");
+      document.getElementById("lentClosetwo").setAttribute("onclick", "closeLentNav(1)");
     }
   }
 /*
@@ -177,6 +182,13 @@ modalImg.addEventListener('touchend', function(e) {
   // Process the data ... 
 }, false);
 
+document.addEventListener( 'mouseup' , function(e) {
+  if ( event.target != this.getElementById(mySidenav)) {
+    closeNav();
+  }
+}
+
+);
 
 
      

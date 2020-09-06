@@ -13,6 +13,19 @@ body {
         color: black;
     }
 
+    .bigName {
+        color: #558000;
+        font-weight: bolder;
+        font-size: 150%;
+        /*text-transform: uppercase;*/
+        margin: 0 0 9% 0;
+    }
+    .controls {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
     .bigbox {
         display: flex;
         flex-wrap: wrap;
@@ -67,7 +80,7 @@ body {
 
    .first
    {
-    padding-top: 10%;
+    padding-top: 1%;
     padding-left: 1%;
    }
 
@@ -190,12 +203,17 @@ body {
     bottom: 0;
     margin-left: auto;
     margin-right: auto;
-    width: 95%;
-    max-height: 15%;
+    max-height: 15vh;
     overflow: auto;
 
     white-space: nowrap;
     transition: max-height 1.5s;
+}
+
+#LentSidenav {
+    max-height: 15vh;
+    transition: max-height 1.5s;
+
 }
 
 .tumpim {
@@ -205,7 +223,7 @@ body {
 .squer {
     position: relative;
     display: inline-block;
-    width: 8%;
+    width: 6%;
     /*margin-bottom: 0.56vh;*/
     overflow: hidden;
     /*border-radius: 50%;*/
@@ -303,12 +321,19 @@ text-align: right;
 
   .midbar{
     display: none;
-    position: relative;
-    height: 0;
+    /* position: relative; */
+    /* height: 0; */
     font-size: 150%;
     align-self: center;
-    bottom: 3.5vh;
+    /* bottom: 3.5vh; */
     z-index: 11;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color: rgba(255,255,255,0.7); 
+    border-radius: 14% 14% 0 0;
+
   }
   .close {
     font-size: 150%;
@@ -424,16 +449,16 @@ text-align: right;
   }
 
   .sidenav {
-    height: 92%;
+    height: 100%;
     width: 0;
     position: fixed;
-    z-index: 50;
+    z-index: 500;
     top: 0;
     left: 0;
     background: rgba(0,0,0,0.8);
     overflow-x: hidden;
     transition: 0.5s;
-    padding-top: 60px;
+    padding-top: 5px;
   }
   
   .sidenav a {
@@ -465,8 +490,9 @@ text-align: right;
     top: 0;
     right: 25px;
     font-size: 36px;
-    margin-left: 50px;
+   
   }
+
 
   .line {
     display: none;
@@ -500,6 +526,11 @@ text-align: right;
   
 
  
+.downPicMenu {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
 
     
 .lenCloseStyle {
@@ -508,8 +539,16 @@ text-align: right;
     width: 15px;
     height:15px;
     z-index: 8;
-    padding: 0 0 0 5%;
+    padding: 0 2% 0 2%;
 }
+#lentClose {
+    margin-right: auto;
+}
+
+#lentClosetwo {
+    margin-left: auto;
+}
+
 .lenCloseStyle > img {
     max-width: 100%;
     max-height: 100%;

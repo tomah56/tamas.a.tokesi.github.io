@@ -530,6 +530,7 @@ text-align: right;
     position: fixed;
     bottom: 0;
     width: 100%;
+    z-index: 11;
 }
 
     
@@ -568,6 +569,9 @@ text-align: right;
      .mobilemenu {
          display: block;
      }
+     .squer {
+        width: 15%;
+    }
 
  
     .rightside {
@@ -593,8 +597,12 @@ text-align: right;
         width: 17%;
     }
     .bigbox {
-    height: 85vh;
+    height: 78vh;
     }
+
+    .lenCloseStyle {
+        width: 25px;
+        height:25px;
   }
 
   @media only screen and (max-width: 830px) and (orientation: landscape) {

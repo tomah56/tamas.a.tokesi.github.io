@@ -49,7 +49,10 @@
                     modalImg.src = newPath(pictureselected);
                     }
                     size= "";
+                    littleSquer[curIndex].focus();
+
                 }
+
                 function newPath(cut) {
                     let pictureName = cut.src.split('/');
                     let z = pictureName.length;

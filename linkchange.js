@@ -56,16 +56,16 @@ let titleNamesContanier = {
 12 :"Catched in action",
 10 :"Standing There",
 3:"Big Life",
-11:"Meaningfull findings",
+11:"Meaningful findings",
 4:"Forgotten life",
-5:"wrincles of Time",
+5:"wrinkles of Time",
 5555:"Viatent Life" ,  
 7:"Frozen Time",
 4444:"Dropped Down",
 8:"Can you Remember?",
 6:"Objecting World",
 2222:"Dancing variations",
-1:"Blured Inside " ,
+1:"Blurred Inside " ,
 2:"Just hiding"
     
 };

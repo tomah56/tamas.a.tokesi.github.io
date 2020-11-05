@@ -1,0 +1,126 @@
+body {
+    background-image: url("./img/topography.png");
+    background-color: white;
+    padding-left: 10%;
+    padding-right: 10%;
+    font-family: 'Courier New', Courier, monospace;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    height: 100%;
+}
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav a {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+nav img {
+    padding: 6px;
+}
+nav div {
+    justify-self: center;
+    align-self: center;
+    margin-right: 5%;
+    margin-left: 5%;
+}
+
+.intro {
+    font-family: 'Syne Mono', monospace;
+    text-align:justify;
+}
+.intro h1 {
+    text-align: left;
+}
+ 
+.surprise {
+    color: white;
+}
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+body a, h2 {
+    text-decoration: none;
+    color: #ff0099;
+}
+
+header {
+    background-color: #333333;
+}
+section img {
+    justify-self: center;
+    align-self: center;
+    width: 30%;
+    padding: 3%;
+}
+
+section div {
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.icon {
+    width: 50%;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 6%;
+    padding-right: 6%;
+    
+}
+
+
+#deff p {
+    line-height: 2;
+}
+
+hr {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    width: 20%;
+    border-top: 1px dashed black;
+}
+
+footer {
+   
+    flex-direction: row;
+    display: flex; 
+    justify-content: center;
+
+}
+
+.soci {
+position: absolute;
+bottom: 0;
+width: 75%;
+justify-content: space-around;
+}
+
+footer div {
+    justify-content: space-between;
+}
+footer p {
+    
+    font-size: xx-small;
+    text-align: center;
+
+}

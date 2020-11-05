@@ -1,0 +1,57 @@
+body{
+    display: flex;
+    font-family: 'Barrio', cursive;
+    justify-content: center;
+    align-content: center;
+}
+body a {
+
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    font-family: 'Cabin Sketch', cursive;
+}
+a:hover {
+    border-bottom: 5px solid black;
+}
+div {
+    padding: 5%;
+}
+
+.main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+}
+
+.main div {
+    flex-direction: column;
+}
+
+.green h2 {
+    color: #019220;
+    white-space: nowrap;
+}
+
+.personal {
+    white-space: nowrap;
+}
+.personal div {
+    display: flex;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    padding-bottom: 10%;
+}
+
+
+
+

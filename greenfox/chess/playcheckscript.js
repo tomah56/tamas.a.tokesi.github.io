@@ -40,9 +40,7 @@ canvas.addEventListener('mousedown', event => {
     let ex = event.offsetX;
     let ey = event.offsetY;
     checker(ex, ey);
-    if (setter === true) {
-        playing = true;
-    }
+    if (setter === true) {playing = true}
 });
 canvas.addEventListener("mousemove", function move(event) {
     if (playing === true) {
@@ -62,9 +60,7 @@ canvas.addEventListener('mouseup', e => {
         whiteData[figureNamePosNumber][3] = 35 + movem * 70;;
     }
     else if (figureColore == "#666666") {
-        //
         blackData.forEach((b, i) => { if (b[0] == figureName) { figureNamePosNumber = i } });
-
         blackData[figureNamePosNumber][2] = 35 + moven * 70;;
         blackData[figureNamePosNumber][3] = 35 + movem * 70;;
     }

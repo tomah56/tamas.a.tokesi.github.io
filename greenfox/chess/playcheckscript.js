@@ -4,202 +4,6 @@ const canvas = document.querySelector('.main-canvas');
 const ctx = canvas.getContext('2d');
 // Rajzol egy színes négyszöget
 
-for (let i = 0; i < 4; i++) {
-    for (let k = 0; k < 4; k++) {
-        ctx.fillStyle = 'black';
-        ctx.fillRect(70 + i * 140, 0 + k * 140, 70, 70);
-        ctx.fillRect(0 + i * 140, 70 + k * 140, 70, 70);
-    }
-}
-
-//bastya
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♖", 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(15 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♖", 15 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♜", 35, 15 * 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(15 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♜", 15 * 35, 15 * 35);
-//lovas
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(3 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♘", 3 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(13 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♘", 13 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(3 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♞", 3 * 35, 15 * 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(13 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♞", 13 * 35, 15 * 35);
-
-//futo
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(5 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♗", 5 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(11 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♗", 11 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(5 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♝", 5 * 35, 15 * 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(11 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♝", 11 * 35, 15 * 35);
-
-//kingh queen
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(7 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♕", 7 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#fff2e6";
-ctx.arc(9 * 35, 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♔", 9 * 35, 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(7 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♚", 7 * 35, 15 * 35);
-
-ctx.beginPath();
-ctx.fillStyle = "#666666";
-ctx.arc(9 * 35, 15 * 35, 30, 0, Math.PI * 2);
-ctx.fill();
-ctx.font = '60px bolder serif';
-ctx.fillStyle = "black";
-ctx.textAlign = "center";
-ctx.textBaseline = "middle";
-ctx.fillText("♛", 9 * 35, 15 * 35);
-
-//paraszt fekete
-for (let i = 0; i < 8; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = "#666666";
-    ctx.arc(35 + 70 * i, 13 * 35, 30, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.font = '60px bolder serif';
-    ctx.fillStyle = "black";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText("♟", 35 + 70 * i, 13 * 35);
-}
-//paraszt fehér
-for (let i = 0; i < 8; i++) {
-    ctx.beginPath();
-    ctx.fillStyle = "#fff2e6";
-    ctx.arc(35 + 70 * i, 3 * 35, 30, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.font = '60px bolder serif';
-    ctx.fillStyle = "black";
-    ctx.textAlign = "center";
-    ctx.textBaseline = "middle";
-    ctx.fillText("♙", 35 + 70 * i, 3 * 35);
-}
-
 let whiteData = [["WhiteKing", "♔", 9 * 35, 35],
 ["WhiteQueen", "♕", 7 * 35, 35],
 ["WhiteRook1", "♖", 35, 35],
@@ -234,6 +38,7 @@ let blackData = [["BlackKing", "♚", 7 * 35, 15 * 35],
 ["BlackPawn7", "♟", 35 + 70 * 6, 13 * 35],
 ["BlackPawn8", "♟", 35 + 70 * 7, 13 * 35]];
 
+redraw();
 //play
 let playing = false;
 canvas.addEventListener('mousedown', event => {
@@ -256,6 +61,8 @@ canvas.addEventListener("mousemove", function move(event) {
 });
 canvas.addEventListener('mouseup', e => {
     if (playing === true) { playing = false }
+
+ 
     let figureNamePosNumber = 0;
 
     if (figureColore == "#fff2e6") {
@@ -279,6 +86,8 @@ canvas.addEventListener('mouseup', e => {
     n = -1;
     m = -1;
     redraw();
+    
+    
 });
 let fildColore = "";
 let figureColore = "";

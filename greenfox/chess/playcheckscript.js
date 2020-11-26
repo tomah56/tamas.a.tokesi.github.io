@@ -54,6 +54,7 @@ canvas.addEventListener("mousemove", function move(event) {
 });
 canvas.addEventListener('mouseup', e => {
     if (playing === true) { playing = false }
+    if (clickFix) {
     let figureNamePosNumber = 0;
     if (figureColore == "#fff2e6") {
         whiteData.forEach((b, i) => { if (b[0] == figureName) { figureNamePosNumber = i } });
@@ -76,6 +77,7 @@ canvas.addEventListener('mouseup', e => {
     n = -1;
     m = -1;
     redraw();
+}
 });
 let fildColore = "";
 let figureColore = "";
@@ -83,6 +85,7 @@ let figureShape = "";
 let figureName = "";
 let n = 0, m = 0;
 let moven, movem;
+let clickFix = false;
 function checkerMove(xe, ye) {
     let x = xe, y = ye;
     for (let i = 0; i < 8; i++) {
@@ -93,6 +96,7 @@ function checkerMove(xe, ye) {
     if ((moven - movem) % 2 === 0) { fildColore = "white" }
     else { fildColore = "black" }
     clearField(moven, movem);
+    clickFix = true;
 }
 let setter = false;
 function checker(xe, ye) {

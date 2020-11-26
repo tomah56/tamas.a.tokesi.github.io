@@ -1,9 +1,6 @@
-//'use strict';
-
+'use strict';
 const canvas = document.querySelector('.main-canvas');
 const ctx = canvas.getContext('2d');
-// Rajzol egy színes négyszöget
-
 let whiteData = [["WhiteKing", "♔", 9 * 35, 35],
 ["WhiteQueen", "♕", 7 * 35, 35],
 ["WhiteRook1", "♖", 35, 35],
@@ -20,7 +17,6 @@ let whiteData = [["WhiteKing", "♔", 9 * 35, 35],
 ["WhitePawn6", "♙", 35 + 70 * 5, 3 * 35],
 ["WhitePawn7", "♙", 35 + 70 * 6, 3 * 35],
 ["WhitePawn8", "♙", 35 + 70 * 7, 3 * 35]];
-
 let blackData = [["BlackKing", "♚", 7 * 35, 15 * 35],
 ["BlackQueen", "♛", 9 * 35, 15 * 35],
 ["BlackRook1", "♜", 35, 15 * 35],
@@ -37,7 +33,6 @@ let blackData = [["BlackKing", "♚", 7 * 35, 15 * 35],
 ["BlackPawn6", "♟", 35 + 70 * 5, 13 * 35],
 ["BlackPawn7", "♟", 35 + 70 * 6, 13 * 35],
 ["BlackPawn8", "♟", 35 + 70 * 7, 13 * 35]];
-
 redraw();
 //play
 let playing = false;
@@ -49,33 +44,28 @@ canvas.addEventListener('mousedown', event => {
         playing = true;
     }
 });
-
 canvas.addEventListener("mousemove", function move(event) {
     if (playing === true) {
         let ex = event.offsetX;
         let ey = event.offsetY;
         checkerMove(ex, ey);
-        //clearField(n, m);
         SetNewFigure(ex, ey);
     }
 });
 canvas.addEventListener('mouseup', e => {
     if (playing === true) { playing = false }
-
- 
     let figureNamePosNumber = 0;
-
     if (figureColore == "#fff2e6") {
-        whiteData.forEach((b, i) => {if (b[0] == figureName) { figureNamePosNumber = i} });
-        whiteData[figureNamePosNumber][2] =  35 + moven * 70;;
-        whiteData[figureNamePosNumber][3] =  35 + movem * 70;;
+        whiteData.forEach((b, i) => { if (b[0] == figureName) { figureNamePosNumber = i } });
+        whiteData[figureNamePosNumber][2] = 35 + moven * 70;;
+        whiteData[figureNamePosNumber][3] = 35 + movem * 70;;
     }
     else if (figureColore == "#666666") {
         //
-        blackData.forEach((b, i) =>  {if (b[0] == figureName) { figureNamePosNumber = i} });
-        
-        blackData[figureNamePosNumber][2] =  35 + moven * 70;;
-        blackData[figureNamePosNumber][3] =  35 + movem * 70;;
+        blackData.forEach((b, i) => { if (b[0] == figureName) { figureNamePosNumber = i } });
+
+        blackData[figureNamePosNumber][2] = 35 + moven * 70;;
+        blackData[figureNamePosNumber][3] = 35 + movem * 70;;
     }
     killchecker(moven, movem);
     fildColore = "";
@@ -86,8 +76,6 @@ canvas.addEventListener('mouseup', e => {
     n = -1;
     m = -1;
     redraw();
-    
-    
 });
 let fildColore = "";
 let figureColore = "";
@@ -97,7 +85,6 @@ let n = 0, m = 0;
 let moven, movem;
 function checkerMove(xe, ye) {
     let x = xe, y = ye;
-
     for (let i = 0; i < 8; i++) {
         for (let k = 0; k < 8; k++) {
             if (x > i * 70 && x < (i + 1) * 70 && y > k * 70 && y < (k + 1) * 70) { moven = i; movem = k }
@@ -115,7 +102,6 @@ function checker(xe, ye) {
             if (x > i * 70 && x < (i + 1) * 70 && y > k * 70 && y < (k + 1) * 70) { n = i; m = k }
         }
     }
-
     let xpos = 35 + n * 70;
     let ypos = 35 + m * 70;
     for (let i = 0; i < blackData.length; i++) {
@@ -135,51 +121,23 @@ function checker(xe, ye) {
     if ((n - m) % 2 === 0) { fildColore = "white" }
     else { fildColore = "black" }
 }
-
-function killchecker(xe,ye) {
+function killchecker(xe, ye) {
     let xpos = 35 + xe * 70;
     let ypos = 35 + ye * 70;
     for (let i = 0; i < blackData.length; i++) {
-        if (blackData[i][2] == xpos && blackData[i][3] == ypos) {
-           
-            if (figureColore == "#fff2e6") {
-                //kill
-                //blackData.splice(i, 0); 
-                blackData[i] = [];
-            }
-           /* else if (figureColore == "#666666") {
-                //redraw
-            }*/
-            
+        if (blackData[i][2] === xpos && blackData[i][3] === ypos && figureColore === "#fff2e6") {
+            blackData[i] = [];
         }
-        else if (whiteData[i][2] == xpos && whiteData[i][3] == ypos) {
-            if (figureColore == "#666666") {
-                //kill
-                //whiteData.splice(i, 0);
-                whiteData[i] = [];
-            }
-          /*  else if (figureColore == "#fff2e6") {
-                //redraw
-            }*/
-
+        else if (whiteData[i][2] == xpos && whiteData[i][3] == ypos && figureColore === "#666666") {
+            whiteData[i] = [];
         }
-    } 
+    }
 }
-
-
 function clearField(xe, ye) {
-
-    //let x = xe, y = ye;
-    // if () { colore = "white";}
     ctx.clearRect(xe * 70, ye * 70, 70, 70);
     ctx.fillStyle = fildColore;
     ctx.fillRect(xe * 70, ye * 70, 70, 70);
-    
-
-
 }
-
-
 function SetNewFigure(xe, ye) {
     let x = xe, y = ye;
     ctx.beginPath();
@@ -192,7 +150,6 @@ function SetNewFigure(xe, ye) {
     ctx.textBaseline = "middle";
     ctx.fillText(figureShape, x, y);
 }
-
 function redraw() {
     ctx.clearRect(0, 0, 560, 560);
     for (let i = 0; i < 4; i++) {
@@ -224,9 +181,4 @@ function redraw() {
         ctx.textBaseline = "middle";
         ctx.fillText(whiteData[i][1], whiteData[i][2], whiteData[i][3]);
     }
-    
 }
-
-// NE NYÚLJ A FENTI KÓDHOZ
-
-// Töltsd ki a canvast sakktábla mintával.

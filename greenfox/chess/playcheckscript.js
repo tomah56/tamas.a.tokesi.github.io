@@ -77,6 +77,7 @@ canvas.addEventListener('mouseup', e => {
     n = -1;
     m = -1;
     redraw();
+    clickFix = false;
 }
 });
 let fildColore = "";
